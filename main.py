@@ -5,6 +5,10 @@ import requests.exceptions
 import urllib.parse
 from collections import deque
 import re
+import os
+
+os.system('clear')
+os.system('figlet -w 1000 -f poison EMAIL SCRAPER | lolcat')
 
 Target_Url = str(input("[+] Enter Target Url to Scan : "))
 Urls = deque([Target_Url])
@@ -47,7 +51,7 @@ try:
                 Urls.append(Link)
 
 except KeyboardInterrupt:
-    print('[-] Closinggggggggg')
+    print('\n[-] Closinggggggggg\n')
 
 for mail in Email:
-    print(mail)
+    print("[i] ",mail)
